@@ -1,0 +1,17 @@
+<ion-view title="Employees">
+  <ion-content class="has-header">
+    <div class="bar bar-header item-input-inset">
+          <input type="text" placeholder=" Search" ng-model="search"
+                  style="width:100%; padding-left:11px;" />
+      </div>
+    <ion-list>
+      <ion-item  type="item-text-wrap"  href="#/app/createTask" ng-click="getEmployee(employee.name)"
+        ng-repeat="employee in employees | filter:search | limitTo:listlength">
+        {{employee.name}}
+      </ion-item>
+    </ion-list>
+     <!--<ion-infinite-scroll ng-if="listlength<=friends.length"
+            on-infinite="loadMore()" distance="3%">
+      </ion-infinite-scroll>-->
+  </ion-content>
+</ion-view>

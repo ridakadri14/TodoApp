@@ -1,0 +1,18 @@
+<ion-view view-title="TaskList">
+  <ion-floating-button click="create()" has-footer="false" button-color="#2AC9AA" icon="ion-plus" icon-color="#fff">
+  </ion-floating-button>
+    <ion-content>
+      <div  ng-if="toDoListItems.length == 0">
+        <h1>No tasks created. Create a new one<h1>
+      </div>
+      <div class="list card" ng-repeat="item in toDoListItems">
+        <div class="card">
+          <div class="item item-divider">
+            {{item.task}}
+          </div>
+          <div class="item item-text-wrap">
+          {{item.name}}&nbsp&nbsp&nbsp&nbsp{{item.date}}
+          </div>
+        </div>
+    </ion-content>
+</ion-view>
