@@ -22,18 +22,6 @@ angular.module('starter', ['ionic', 'starter.controllers','ngCordova','ion-float
   });
 })
 
-/*.service('taskService', function () {
-
-	 this.addTaskToLocalStorage = function(items) {
-      localStorage.setItem("cart", JSON.stringify(items));
-     };
-
-     this.getTask = function() {
-        var items = JSON.parse(localStorage.getItem("cart"));
-         return items;
-       };
-
-})*/
 
 .config(function($stateProvider, $urlRouterProvider) {
   $stateProvider
